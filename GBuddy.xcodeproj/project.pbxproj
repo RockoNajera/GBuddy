@@ -10,10 +10,12 @@
 		5B4DF3491EBD247C00EC3519 /* routineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF3481EBD247C00EC3519 /* routineItem.swift */; };
 		5B4DF34B1EBD268F00EC3519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B4DF34A1EBD268F00EC3519 /* GoogleService-Info.plist */; };
 		5B589F8B1EBD200200B2AF14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589F8A1EBD200200B2AF14 /* AppDelegate.swift */; };
-		5B589F8D1EBD200200B2AF14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589F8C1EBD200200B2AF14 /* ViewController.swift */; };
+		5B589F8D1EBD200200B2AF14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589F8C1EBD200200B2AF14 /* MainViewController.swift */; };
 		5B589F901EBD200200B2AF14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B589F8E1EBD200200B2AF14 /* Main.storyboard */; };
 		5B589F921EBD200200B2AF14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B589F911EBD200200B2AF14 /* Assets.xcassets */; };
 		5B589F951EBD200200B2AF14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B589F931EBD200200B2AF14 /* LaunchScreen.storyboard */; };
+		5BDDA5911EC1064300913AC7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDA5901EC1064300913AC7 /* User.swift */; };
+		5BDDA5961EC106CC00913AC7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDDA5951EC106CC00913AC7 /* LoginViewController.swift */; };
 		5EBD69A95249BDEEDF6DAC52 /* Pods_GBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E55240BEF3AA21CD7AC03F /* Pods_GBuddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +25,13 @@
 		5B4DF34A1EBD268F00EC3519 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B589F871EBD200200B2AF14 /* GBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B589F8A1EBD200200B2AF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B589F8C1EBD200200B2AF14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B589F8C1EBD200200B2AF14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B589F8F1EBD200200B2AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B589F911EBD200200B2AF14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B589F941EBD200200B2AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B589F961EBD200200B2AF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BDDA5901EC1064300913AC7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5BDDA5951EC106CC00913AC7 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7A9C921806105486EFDAFC27 /* Pods-GBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-GBuddy/Pods-GBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		88E1F80EF21ACB39517038C9 /* Pods-GBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GBuddy/Pods-GBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5B4DF3481EBD247C00EC3519 /* routineItem.swift */,
+				5BDDA5901EC1064300913AC7 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -90,16 +95,41 @@
 		5B589F891EBD200200B2AF14 /* GBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				5BDDA5941EC1066C00913AC7 /* Storyboards */,
+				5BDDA5931EC1066500913AC7 /* Other */,
+				5BDDA5921EC1065400913AC7 /* Views */,
 				5B4DF3471EBD23EF00EC3519 /* Models */,
-				5B589F8A1EBD200200B2AF14 /* AppDelegate.swift */,
-				5B589F8C1EBD200200B2AF14 /* ViewController.swift */,
-				5B589F8E1EBD200200B2AF14 /* Main.storyboard */,
 				5B589F911EBD200200B2AF14 /* Assets.xcassets */,
-				5B589F931EBD200200B2AF14 /* LaunchScreen.storyboard */,
-				5B589F961EBD200200B2AF14 /* Info.plist */,
-				5B4DF34A1EBD268F00EC3519 /* GoogleService-Info.plist */,
 			);
 			path = GBuddy;
+			sourceTree = "<group>";
+		};
+		5BDDA5921EC1065400913AC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B589F8C1EBD200200B2AF14 /* MainViewController.swift */,
+				5BDDA5951EC106CC00913AC7 /* LoginViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5BDDA5931EC1066500913AC7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5B589F961EBD200200B2AF14 /* Info.plist */,
+				5B4DF34A1EBD268F00EC3519 /* GoogleService-Info.plist */,
+				5B589F8A1EBD200200B2AF14 /* AppDelegate.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		5BDDA5941EC1066C00913AC7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B589F8E1EBD200200B2AF14 /* Main.storyboard */,
+				5B589F931EBD200200B2AF14 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B589F8D1EBD200200B2AF14 /* ViewController.swift in Sources */,
+				5BDDA5911EC1064300913AC7 /* User.swift in Sources */,
+				5B589F8D1EBD200200B2AF14 /* MainViewController.swift in Sources */,
 				5B589F8B1EBD200200B2AF14 /* AppDelegate.swift in Sources */,
+				5BDDA5961EC106CC00913AC7 /* LoginViewController.swift in Sources */,
 				5B4DF3491EBD247C00EC3519 /* routineItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
