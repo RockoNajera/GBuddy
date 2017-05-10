@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
             // 2
             if user != nil {
                 // 3
+                self.presentViewController()
             }
         }
         

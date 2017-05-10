@@ -10,6 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var goToRutinaButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +24,27 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func goToController(_ sender: UIButton) {
+        
+        let button = sender
+        
+        print(button.tag)
+        
+        switch button.tag {
+        case 0: presentViewController()
+        case 1: presentViewController()
+        default: print("The button does not present any view controller")
+        }
+        
+    }
+    
+    func presentViewController(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier :"ExercisesTable")
+        
+        self.present(viewController, animated: true)
+    }
 
 }
 

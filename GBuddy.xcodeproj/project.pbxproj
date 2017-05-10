@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B016FF01EC24068007364BF /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B016FEF1EC24068007364BF /* ExercisesTableViewController.swift */; };
 		5B4DF3491EBD247C00EC3519 /* routineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DF3481EBD247C00EC3519 /* routineItem.swift */; };
 		5B4DF34B1EBD268F00EC3519 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B4DF34A1EBD268F00EC3519 /* GoogleService-Info.plist */; };
 		5B589F8B1EBD200200B2AF14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B589F8A1EBD200200B2AF14 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		24E55240BEF3AA21CD7AC03F /* Pods_GBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B016FEF1EC24068007364BF /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		5B4DF3481EBD247C00EC3519 /* routineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = routineItem.swift; sourceTree = "<group>"; };
 		5B4DF34A1EBD268F00EC3519 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5B589F871EBD200200B2AF14 /* GBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5B589F8C1EBD200200B2AF14 /* MainViewController.swift */,
+				5B016FEF1EC24068007364BF /* ExercisesTableViewController.swift */,
 				5BDDA5951EC106CC00913AC7 /* LoginViewController.swift */,
 			);
 			name = Views;
@@ -260,6 +263,7 @@
 				5BDDA5911EC1064300913AC7 /* User.swift in Sources */,
 				5B589F8D1EBD200200B2AF14 /* MainViewController.swift in Sources */,
 				5B589F8B1EBD200200B2AF14 /* AppDelegate.swift in Sources */,
+				5B016FF01EC24068007364BF /* ExercisesTableViewController.swift in Sources */,
 				5BDDA5961EC106CC00913AC7 /* LoginViewController.swift in Sources */,
 				5B4DF3491EBD247C00EC3519 /* routineItem.swift in Sources */,
 			);
