@@ -14,7 +14,7 @@ class ExercisesTableViewController: UITableViewController {
 
     
     // MARK: Properties
-    var items: [routineItem] = []
+    var items: [routineItems] = []
     var user: User!
     var userCountBarButtonItem: UIBarButtonItem!
     let ref = FIRDatabase.database().reference(withPath: "routine-items")
@@ -44,10 +44,10 @@ class ExercisesTableViewController: UITableViewController {
         user = User(uid: "InitUser", email: "userInit@test.com")
         
         ref.queryOrdered(byChild: "completed").observe(.value, with: { snapshot in
-            var newItems: [routineItem] = []
+            var newItems: [routineItems] = []
             
             for item in snapshot.children {
-                let groceryItem = routineItem(snapshot: item as! FIRDataSnapshot)
+                let groceryItem = routineItems(snapshot: item as! FIRDataSnapshot)
                 newItems.append(groceryItem)
             }
             
@@ -68,17 +68,7 @@ class ExercisesTableViewController: UITableViewController {
             
             
         })
-        
-//        usersRef.observe(.value, with: { snapshot in
-//            if snapshot.exists() {
-//                self.userCountBarButtonItem?.title = snapshot.childrenCount.description
-//            } else {
-//                self.userCountBarButtonItem?.title = "0"
-//            }
-//        })
-        
-        
-        
+    
         isUser = true
         
         if isUser == true {
@@ -159,15 +149,15 @@ class ExercisesTableViewController: UITableViewController {
                                         guard let textField = alert.textFields?.first, let text = textField.text else { return }
                                         
                                         // 2
-                                        let groceryItem = routineItem(name: text, addedByUser: self.user.email, completed: false)
+                                        let routineItem = routineItems(name: text, addedByUser: self.user.email, completed: false)
                                         
                                         // 3
-                                        let groceryItemRef = self.ref.child(text.lowercased())
+                                        let routineItemRef = self.ref.child(text.lowercased())
                                         
                                         // 4
-                                        groceryItemRef.setValue(groceryItem.toAnyObject())
+                                        routineItemRef.setValue(routineItem.toAnyObject())
                                         
-                                        self.items.append(groceryItem)
+                                        self.items.append(routineItem)
                                         self.tableView.reloadData()
         }
         
