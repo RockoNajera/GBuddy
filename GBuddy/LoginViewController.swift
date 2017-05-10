@@ -85,9 +85,7 @@ class LoginViewController: UIViewController {
     }
     
     func presentViewController(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier :"Main")
-        self.present(viewController, animated: true)
+        self.performSegue(withIdentifier: "LoginSuccess", sender: nil)
     }
     
 }

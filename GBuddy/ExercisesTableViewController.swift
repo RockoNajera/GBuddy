@@ -12,19 +12,17 @@ import Firebase
 class ExercisesTableViewController: UITableViewController {
 
 
-    // MARK: Constants
-    let listToUsers = "ListToUsers"
     
     // MARK: Properties
     var items: [routineItem] = []
     var user: User!
     var userCountBarButtonItem: UIBarButtonItem!
-    let ref = FIRDatabase.database().reference(withPath: "grocery-items")
+    let ref = FIRDatabase.database().reference(withPath: "routine-items")
     let usersRef = FIRDatabase.database().reference(withPath: "online")
     var isUser: Bool?
     
     //MARK: Outlets
-    @IBOutlet weak var addExerciseButton: UIButton!
+    @IBOutlet weak var addExerciseButton: UIBarButtonItem!
     
     
     
@@ -36,11 +34,11 @@ class ExercisesTableViewController: UITableViewController {
         
         tableView.allowsMultipleSelectionDuringEditing = false
         
-        userCountBarButtonItem = UIBarButtonItem(title: "1",
+        userCountBarButtonItem = UIBarButtonItem(title: "< Atras",
                                                  style: .plain,
                                                  target: self,
                                                  action: #selector(userCountButtonDidTouch))
-        userCountBarButtonItem.tintColor = UIColor.white
+        userCountBarButtonItem.tintColor = UIColor.black
         navigationItem.leftBarButtonItem = userCountBarButtonItem
         
         user = User(uid: "InitUser", email: "userInit@test.com")
@@ -71,19 +69,21 @@ class ExercisesTableViewController: UITableViewController {
             
         })
         
-        usersRef.observe(.value, with: { snapshot in
-            if snapshot.exists() {
-                self.userCountBarButtonItem?.title = snapshot.childrenCount.description
-            } else {
-                self.userCountBarButtonItem?.title = "0"
-            }
-        })
+//        usersRef.observe(.value, with: { snapshot in
+//            if snapshot.exists() {
+//                self.userCountBarButtonItem?.title = snapshot.childrenCount.description
+//            } else {
+//                self.userCountBarButtonItem?.title = "0"
+//            }
+//        })
+        
+        
         
         isUser = true
         
         if isUser == true {
             
-            //self.addExerciseButton.isHidden = true
+            self.addExerciseButton.title = ""
             
         }
         
@@ -183,6 +183,8 @@ class ExercisesTableViewController: UITableViewController {
     }
     
     func userCountButtonDidTouch() {
-        performSegue(withIdentifier: listToUsers, sender: nil)
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
     }
 }
