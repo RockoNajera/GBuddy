@@ -17,7 +17,7 @@ class ExercisesTableViewController: UITableViewController {
     var items: [routineItems] = []
     var user: User!
     var userCountBarButtonItem: UIBarButtonItem!
-    let ref = FIRDatabase.database().reference(withPath: "routine-items")
+    let ref = FIRDatabase.database().reference(withPath: "routine-items for user: Rodrigo Nájera")
     let usersRef = FIRDatabase.database().reference(withPath: "online")
     var isUser: Bool?
     
@@ -87,12 +87,12 @@ class ExercisesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
-        let groceryItem = items[indexPath.row]
+        let routineItem = items[indexPath.row]
         
-        cell.textLabel?.text = groceryItem.name
-        cell.detailTextLabel?.text = groceryItem.addedByUser
+        cell.textLabel?.text = routineItem.name
+        cell.detailTextLabel?.text = "Repeticiones:  3 / 15"//routineItem.addedByUser
         
-        toggleCellCheckbox(cell, isCompleted: groceryItem.completed)
+        toggleCellCheckbox(cell, isCompleted: routineItem.completed)
         
         return cell
     }
